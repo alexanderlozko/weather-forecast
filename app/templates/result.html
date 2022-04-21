@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+    <div>
+    <p> </p>
+    </div>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Result:</h5> {% if result == 1 %}<h5 style="color: red">Rain</h5>{% else %}<h5 style="color: green">Not Rain</h5>{% endif %}
+                <h6>Used Data:</h6>
+                {% for c in columns %}
+                <p>{{ c }} : {{ data[c][0] }}</p>
+                {% endfor %}
+            </div>
+            <p>Click the <a href="/">Main</a> to leave the page.</p>
+        </div>
+     </div>
+</div>
+
+{% endblock %}

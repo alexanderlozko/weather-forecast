@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1 align="center">Input the CSV file</h1>
+	<form action="/forecast_csv" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file">
+		<input type="submit">Upload and Forecast</input>
+	</form>
+</div>
+{% endblock %}

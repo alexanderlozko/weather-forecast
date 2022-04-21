@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h1 align="center">Input the data</h1>
+	<form method=post action="/forecast_manually">
+		{{ form.hidden_tag() }}
+		<dl>
+			<div class="form-group">
+				{{ form.Location.label }}<br>
+				{{ form.Location(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.MinTemp.label }}<br>
+				{{ form.MinTemp(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.MaxTemp.label }}<br>
+				{{ form.MaxTemp(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Rainfall.label }}<br>
+				{{ form.Rainfall(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Evaporation.label }}<br>
+				{{ form.Evaporation(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Sunshine.label }}<br>
+				{{ form.Sunshine(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindGustDir.label }}<br>
+				{{ form.WindGustDir(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindGustSpeed.label }}<br>
+				{{ form.WindGustSpeed(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindGustSpeed.label }}<br>
+				{{ form.WindGustSpeed(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindDir9am.label }}<br>
+				{{ form.WindDir9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindDir3pm.label }}<br>
+				{{ form.WindDir3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindSpeed9am.label }}<br>
+				{{ form.WindSpeed9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.WindSpeed3pm.label }}<br>
+				{{ form.WindSpeed3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Humidity9am.label }}<br>
+				{{ form.Humidity9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Humidity3pm.label }}<br>
+				{{ form.Humidity3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Pressure9am.label }}<br>
+				{{ form.Pressure9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Pressure3pm.label }}<br>
+				{{ form.Pressure3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Cloud9am.label }}<br>
+				{{ form.Cloud9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Cloud3pm.label }}<br>
+				{{ form.Cloud3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Temp9am.label }}<br>
+				{{ form.Temp9am(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.Temp3pm.label }}<br>
+				{{ form.Temp3pm(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.RainToday.label }}<br>
+				{{ form.RainToday(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.year.label }}<br>
+				{{ form.year(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.month_sin.label }}<br>
+				{{ form.month_sin(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.month_cos.label }}<br>
+				{{ form.month_cos(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.day_sin.label }}<br>
+				{{ form.day_sin(class='form-control') }}
+			</div>
+			<div class="form-group">
+				{{ form.day_cos.label }}<br>
+				{{ form.day_cos(class='form-control') }}
+			</div>
+		</dl>
+		<div align="center">
+			<button type="submit" class="btn btn-primary">Forecast</button>
+            <hr>
+		</div>
+	</form>
+</div>
+{% endblock %}
